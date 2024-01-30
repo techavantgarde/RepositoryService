@@ -11,6 +11,7 @@ namespace Constant
                     nodes {
                         name
                         url
+                        login
                     }
                 }
             }

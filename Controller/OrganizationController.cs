@@ -1,4 +1,6 @@
+using DTO.Organization;
 using Microsoft.AspNetCore.Mvc;
+using Service;
 
 namespace Controller
 {
@@ -6,15 +8,17 @@ namespace Controller
     [Route("[controller]")]
     public class OrganizationController : ControllerBase
     {
-        public IActionResult GetAllOrganizations()
+        [HttpPost("GetAllOrganizations")]
+        public IActionResult GetAllOrganizations(OrganizationRequest organizationRequest)
         {
             try
             {
-                return Ok();
+                OrganizationService organizationService = new();
+                return Ok(organizationService.GetAllOrganizations(organizationRequest));
             }
-            catch
+            catch (Exception ex)
             {
-                return StatusCode(500);
+                return StatusCode(500, ex);
             }
         }
     }

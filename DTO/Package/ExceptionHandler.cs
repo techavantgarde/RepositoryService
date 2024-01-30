@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Text;
 
-namespace Shared.DTO.Package
+namespace DTO.Package
 {
     public static class ExceptionHandler
     {

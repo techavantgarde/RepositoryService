@@ -1,4 +1,4 @@
-namespace Shared.DTO.Package
+namespace DTO.Package
 {
     public enum StatusCode
     {
